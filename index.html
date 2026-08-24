@@ -2,454 +2,295 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ShopNest — Curated pieces for a life well-lived. Embrace the elegance of understatement and timeless luxury.">
+    <meta name="theme-color" content="#1C1917">
 
-    <title>ShopNest Ecomerce</title>
+    <title>ShopNest — Timeless Style &amp; Quiet Luxury</title>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-          rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@300;400;500&display=swap"
-          rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
 </head>
 
 <body>
 
-<header class="top-header">
+    <!-- ==========================================================================
+         TOP NAVIGATION HEADER
+         ========================================================================== -->
+    <header class="top-header">
+        <nav class="navbar navbar-expand-md navbar-custom">
+            <div class="container">
 
-    <nav class="navbar navbar-expand-md navbar-custom">
+                <!-- Mobile Menu Toggle Button -->
+                <button class="menu-btn d-md-none" type="button" aria-label="Toggle navigation menu">
+                    <i class="bi bi-list"></i>
+                </button>
 
-        <div class="container">
+                <!-- Left Navigation Links -->
+                <ul class="nav-links d-none d-md-flex">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#new-arrivals">SHOP</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#categories">CATEGORIES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trending">EDITORIAL</a>
+                    </li>
+                </ul>
 
-            <!-- Mobile Menu -->
-            <button class="menu-btn d-md-none" type="button">
-                <i class="bi bi-list"></i>
-            </button>
-
-            <!-- Left Navigation -->
-            <ul class="nav-links d-none d-md-flex">
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">SHOP</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">CATEGORIES</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="#">ABOUT</a>
-                </li>
-
-            </ul>
-
-            <!-- Logo -->
-            <a href="#" class="logo navbar-brand">
-                ATELIER
-            </a>
-
-            <!-- Right Icons -->
-            <div class="nav-icons d-none d-md-flex">
-
-                <a href="#">
-                    <i class="bi bi-search"></i>
+                <!-- Brand Logo -->
+                <a href="#" class="logo navbar-brand">
+                    SHOPNEST
                 </a>
 
-                <a href="#">
-                    <i class="bi bi-heart"></i>
-                </a>
+                <!-- Right Action Icons -->
+                <div class="nav-icons d-none d-md-flex">
+                    <a href="#search" aria-label="Search catalog">
+                        <i class="bi bi-search"></i>
+                    </a>
+                    <a href="#wishlist" aria-label="View wishlist">
+                        <i class="bi bi-heart"></i>
+                    </a>
+                    <a href="#cart" aria-label="View shopping bag">
+                        <i class="bi bi-bag"></i>
+                    </a>
+                    <a href="#account" aria-label="User account">
+                        <i class="bi bi-person"></i>
+                    </a>
+                </div>
 
-                <a href="#">
+                <!-- Mobile Cart Link -->
+                <a href="#cart" class="mobile-cart d-md-none" aria-label="View shopping bag">
                     <i class="bi bi-bag"></i>
                 </a>
 
-                <a href="#">
-                    <i class="bi bi-person"></i>
-                </a>
-
             </div>
+        </nav>
+    </header>
 
-            <!-- Mobile Cart -->
-            <a href="#" class="mobile-cart d-md-none">
-                <i class="bi bi-bag"></i>
-            </a>
+    <main>
 
+        <!-- ==========================================================================
+             HERO BANNER SECTION
+             ========================================================================== -->
+        <section class="hero" id="home">
+            <img src="asset/Hero.png" alt="ShopNest Autumn/Winter Collection" class="hero-image">
+
+            <div class="hero-overlay">
+                <span class="hero-tag">NEW COLLECTION</span>
+                <h1>Timeless Style</h1>
+                <p>Curated pieces for a life well-lived. Embrace the elegance of understatement.</p>
+                <a href="#new-arrivals" class="hero-btn">EXPLORE COLLECTION</a>
+            </div>
+        </section>
+
+        <!-- Complimentary Shipping Bar -->
+        <div class="shipping-bar">
+            <span>Complimentary global shipping and returns on all orders over $300.</span>
         </div>
 
-    </nav>
+        <!-- ==========================================================================
+             FEATURED CATEGORIES SECTION
+             ========================================================================== -->
+        <section class="featured-categories" id="categories">
+            <div class="container">
 
-</header>
-
-<main>
-<section class="hero">
-    <img src="asset/Hero.png" alt="Hero Image" class="hero-image">
-
-    <div class="hero-overlay">
-        <span class="hero-tag">NEW COLLECTION</span>
-        <h1>Timeless Style</h1>
-        <p>Curated pieces for a life well-lived. Embrace the elegance of understatement.</p>
-        <a href="#" class="hero-btn">EXPLORE COLLECTION</a>
-    </div>
-</section>
-
-<section class="shipping-bar">
-    Complimentary global shipping and returns on all orders over $300.
-</section>
-
-<section class="featured-categories">
-
-    <div class="container">
-
-        <!-- Mobile Heading -->
-        <div class="section-heading">
-            <h2>Essentials</h2>
-            <span></span>
-        </div>
-
-        <div class="category-grid">
-
-            <!-- LEFT LARGE CARD -->
-
-            <article class="category-card category-large">
-
-                <img src="asset//essential.png"
-                     alt="Essentials">
-
-                <div class="category-content">
-
-                    <h3>Essentials</h3>
-
+                <!-- Mobile Section Heading -->
+                <div class="section-heading">
+                    <h2>Essentials</h2>
+                    <span></span>
                 </div>
 
-            </article>
+                <div class="category-grid">
 
-            <!-- RIGHT COLUMN -->
+                    <!-- Left Large Featured Category Card -->
+                    <article class="category-card category-large">
+                        <img src="asset/essential.png" alt="Essentials Collection">
+                        <div class="category-content">
+                            <h3>Essentials</h3>
+                            <a href="#new-arrivals">SHOP NOW</a>
+                        </div>
+                    </article>
 
-            <div class="category-right">
+                    <!-- Right Column Category Cards -->
+                    <div class="category-right">
 
-                <article class="category-card">
+                        <article class="category-card">
+                            <img src="asset/shirt.png" alt="Signature Shirts Collection">
+                            <div class="category-content">
+                                <h3>Shirts</h3>
+                                <a href="#new-arrivals">SHOP NOW</a>
+                            </div>
+                        </article>
 
-                    <img src="asset//shirt.png"
-                         alt="Shirts">
-
-                    <div class="category-content">
-
-                        <h3>Shirts</h3>
-
-                        <a href="#">SHOP NOW</a>
-
-                    </div>
-
-                </article>
-
-                <article class="category-card">
-
-                    <img src="asset/jeans.png"
-                         alt="Jeans">
-
-                    <div class="category-content">
-
-                        <h3>Jeans</h3>
-
-                        <a href="#">SHOP NOW</a>
+                        <article class="category-card">
+                            <img src="asset/jeans.png" alt="Tailored Jeans Collection">
+                            <div class="category-content">
+                                <h3>Jeans</h3>
+                                <a href="#new-arrivals">SHOP NOW</a>
+                            </div>
+                        </article>
 
                     </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- 
-     NEW ARRIVALS SECTION
- -->
-
-<section class="new-arrivals py-5">
-
-    <div class="container-fluid px-lg-5 px-3">
-
-        <!-- Section Header -->
-        <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
-
-            <h2 class="section-title mb-0">
-                New Arrivals
-            </h2>
-
-            <a href="#" class="view-all">
-                VIEW ALL
-            </a>
-
-        </div>
-
-        <!-- Products -->
-        <div class="row g-4">
-
-            <!-- Product 1 -->
-            <div class="col-lg-3 col-md-6 col-6">
-
-                <article class="product-card">
-
-                    <div class="product-image">
-
-                        <span class="badge-new">
-                        </span>
-
-                        <img src="asset/Blazer.png"
-                             class="img-fluid"
-                             alt="Structured Linen Blazer">
-
-                    </div>
-
-                    <div class="product-info text-center">
-
-                        <h5 class="product-title">
-                            Structured Linen Blazer
-                        </h5>
-
-                        <p class="product-price">
-                            $495
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <!-- Product 2 -->
-            <div class="col-lg-3 col-md-6 col-6">
-
-                <article class="product-card">
-
-                    <div class="product-image">
-
-                        <img src="asset/silk blouse.png"
-                             class="img-fluid"
-                             alt="Fluid Silk Blouse">
-
-                    </div>
-
-                    <div class="product-info text-center">
-
-                        <h5 class="product-title">
-                            Fluid Silk Blouse
-                        </h5>
-
-                        <p class="product-price">
-                            $280
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <!-- Product 3 -->
-            <div class="col-lg-3 col-md-6 col-6">
-
-                <article class="product-card">
-
-                    <div class="product-image">
-
-                        <img src="asset/coat.png"
-                             class="img-fluid"
-                             alt="Wide-Leg Wool Trousers">
-
-                    </div>
-
-                    <div class="product-info text-center">
-
-                        <h5 class="product-title">
-                            Wide-Leg Wool Trousers
-                        </h5>
-
-                        <p class="product-price">
-                            $340
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-            <!-- Product 4 -->
-            <div class="col-lg-3 col-md-6 col-6">
-
-                <article class="product-card">
-
-                    <div class="product-image">
-
-                        <img src="asset/trouser.png"
-                             class="img-fluid"
-                             alt="Unstructured Cashmere Coat">
-
-                    </div>
-
-                    <div class="product-info text-center">
-
-                        <h5 class="product-title">
-                            Unstructured Cashmere Coat
-                        </h5>
-
-                        <p class="product-price">
-                            $850
-                        </p>
-
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- =========================
-     TRENDING PICKS SECTION
-========================= -->
-
-<section class="trending-section py-5">
-
-    <div class="container">
-
-        <div class="row g-4 align-items-center">
-
-            <!-- Left Image -->
-
-            <div class="col-lg-8">
-
-                <div class="trending-image">
-
-                    <img src="asset/trend pick.png"
-                         alt="Trending Collection"
-                         class="img-fluid">
 
                 </div>
 
             </div>
+        </section>
 
-            <!-- Right Content -->
+        <!-- ==========================================================================
+             NEW ARRIVALS PRODUCT SECTION
+             ========================================================================== -->
+        <section class="new-arrivals" id="new-arrivals">
+            <div class="container-fluid px-lg-5 px-3">
 
-            <div class="col-lg-4">
+                <!-- Section Header -->
+                <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4">
+                    <h2 class="section-title mb-0">New Arrivals</h2>
+                    <a href="#new-arrivals" class="view-all">VIEW ALL</a>
+                </div>
 
-                <div class="trending-content">
+                <!-- Products Grid -->
+                <div class="row g-4">
 
-                    <span class="section-tag">
-                        CURATED SELECTION
-                    </span>
+                    <!-- Product 1 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <article class="product-card">
+                            <div class="product-image">
+                                <span class="badge-new">NEW</span>
+                                <img src="asset/Blazer.png" class="img-fluid" alt="Structured Linen Blazer">
+                            </div>
+                            <div class="product-info text-center">
+                                <h3 class="product-title">Structured Linen Blazer</h3>
+                                <p class="product-price">$495</p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <h2>
-                        Trending Picks
-                        <br>
-                        For The Season
-                    </h2>
+                    <!-- Product 2 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <article class="product-card">
+                            <div class="product-image">
+                                <img src="asset/silk blouse.png" class="img-fluid" alt="Fluid Silk Blouse">
+                            </div>
+                            <div class="product-info text-center">
+                                <h3 class="product-title">Fluid Silk Blouse</h3>
+                                <p class="product-price">$280</p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <p>
+                    <!-- Product 3 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <article class="product-card">
+                            <div class="product-image">
+                                <img src="asset/trouser.png" class="img-fluid" alt="Wide-Leg Wool Trousers">
+                            </div>
+                            <div class="product-info text-center">
+                                <h3 class="product-title">Wide-Leg Wool Trousers</h3>
+                                <p class="product-price">$340</p>
+                            </div>
+                        </article>
+                    </div>
 
-                        Discover pieces defined by their meticulous craftsmanship
-                        and understated elegance. Designed to transcend seasons,
-                        our latest curation offers the perfect balance of form,
-                        function, and unparalleled quality.
-
-                    </p>
-
-                    <a href="#" class="lookbook-btn">
-
-                        VIEW THE LOOKBOOK
-
-                    </a>
+                    <!-- Product 4 -->
+                    <div class="col-lg-3 col-md-6 col-6">
+                        <article class="product-card">
+                            <div class="product-image">
+                                <img src="asset/coat.png" class="img-fluid" alt="Unstructured Cashmere Coat">
+                            </div>
+                            <div class="product-info text-center">
+                                <h3 class="product-title">Unstructured Cashmere Coat</h3>
+                                <p class="product-price">$850</p>
+                            </div>
+                        </article>
+                    </div>
 
                 </div>
 
             </div>
+        </section>
 
-        </div>
+        <!-- ==========================================================================
+             TRENDING PICKS / EDITORIAL SECTION
+             ========================================================================== -->
+        <section class="trending-section" id="trending">
+            <div class="container">
+                <div class="row g-4 align-items-center">
 
-    </div>
+                    <!-- Left Featured Image -->
+                    <div class="col-lg-8">
+                        <div class="trending-image">
+                            <img src="asset/trend pick.png" alt="Curated Seasonal Collection" class="img-fluid">
+                        </div>
+                    </div>
 
-</section>
+                    <!-- Right Editorial Content -->
+                    <div class="col-lg-4">
+                        <div class="trending-content">
+                            <span class="section-tag">CURATED SELECTION</span>
+                            <h2>
+                                Trending Picks<br>For The Season
+                            </h2>
+                            <p>
+                                Discover pieces defined by their meticulous craftsmanship
+                                and understated elegance. Designed to transcend seasons,
+                                our latest curation offers the perfect balance of form,
+                                function, and unparalleled quality.
+                            </p>
+                            <a href="#new-arrivals" class="lookbook-btn">VIEW THE LOOKBOOK</a>
+                        </div>
+                    </div>
 
-<!-- =========================
-        FOOTER
-========================= -->
+                </div>
+            </div>
+        </section>
 
-<footer class="site-footer">
+    </main>
 
-    <div class="container">
+    <!-- ==========================================================================
+         FOOTER SECTION
+         ========================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row align-items-start">
 
-        <div class="row align-items-start">
+                <!-- Left Column -->
+                <div class="col-lg-5 footer-left">
+                    <a href="#" class="footer-logo">SHOPNEST</a>
+                    <p class="copyright">&copy; 2026 SHOPNEST. DEFINING QUIET LUXURY.</p>
+                </div>
 
-            <!-- Left -->
-
-            <div class="col-lg-5 footer-left">
-
-                <a href="#" class="footer-logo">
-                    ATELIER
-                </a>
-
-                <p class="copyright">
-                    © 2024 ATELIER. DEFINING QUIET LUXURY.
-                </p>
+                <!-- Right Column -->
+                <div class="col-lg-7">
+                    <ul class="footer-links">
+                        <li><a href="#sustainability">SUSTAINABILITY</a></li>
+                        <li><a href="#shipping">SHIPPING</a></li>
+                        <li><a href="#contact">CONTACT</a></li>
+                        <li><a href="#privacy">PRIVACY</a></li>
+                    </ul>
+                </div>
 
             </div>
-
-            <!-- Right -->
-
-            <div class="col-lg-7">
-
-                <ul class="footer-links">
-
-                    <li>
-                        <a href="#">SUSTAINABILITY</a>
-                    </li>
-
-                    <li>
-                        <a href="#">SHIPPING</a>
-                    </li>
-
-                    <li>
-                        <a href="#">CONTACT</a>
-                    </li>
-
-                    <li>
-                        <a href="#">PRIVACY</a>
-                    </li>
-
-                </ul>
-
-            </div>
-
         </div>
+    </footer>
 
-    </div>
-
-</footer>
-
-</main>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
