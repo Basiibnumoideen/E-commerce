@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "name": "Structured Linen Blazer",
+    "category": "Clothing",
+    "price": 495,
+    "originalPrice": 590,
+    "rating": 4.8,
+    "imageUrl": "asset/Blazer.png",
+    "isNew": true
+  },
+  {
+    "id": 2,
+    "name": "Fluid Silk Blouse",
+    "category": "Clothing",
+    "price": 280,
+    "originalPrice": 350,
+    "rating": 4.9,
+    "imageUrl": "asset/silk blouse.png",
+    "isNew": true
+  },
+  {
+    "id": 3,
+    "name": "Wide-Leg Wool Trousers",
+    "category": "Clothing",
+    "price": 340,
+    "originalPrice": 420,
+    "rating": 4.7,
+    "imageUrl": "asset/trouser.png",
+    "isNew": false
+  },
+  {
+    "id": 4,
+    "name": "Unstructured Cashmere Coat",
+    "category": "Clothing",
+    "price": 850,
+    "originalPrice": 990,
+    "rating": 5.0,
+    "imageUrl": "asset/coat.png",
+    "isNew": true
+  },
+  {
+    "id": 5,
+    "name": "Tailored Slim Jeans",
+    "category": "Clothing",
+    "price": 210,
+    "originalPrice": 260,
+    "rating": 4.7,
+    "imageUrl": "asset/jeans.png",
+    "isNew": false
+  },
+  {
+    "id": 6,
+    "name": "Classic Oxford Shirt",
+    "category": "Clothing",
+    "price": 185,
+    "originalPrice": 220,
+    "rating": 4.6,
+    "imageUrl": "asset/shirt.png",
+    "isNew": false
+  },
+  {
+    "id": 7,
+    "name": "Wireless Noise-Cancelling Headphones",
+    "category": "Electronics",
+    "price": 349,
+    "originalPrice": 429,
+    "rating": 4.9,
+    "imageUrl": "asset/headphones.jpg",
+    "isNew": true
+  },
+  {
+    "id": 8,
+    "name": "Smart Fitness Watch",
+    "category": "Electronics",
+    "price": 279,
+    "originalPrice": 349,
+    "rating": 4.8,
+    "imageUrl": "asset/smartwatch.jpg",
+    "isNew": true
+  },
+  {
+    "id": 9,
+    "name": "Minimalist Mechanical Keyboard",
+    "category": "Electronics",
+    "price": 159,
+    "originalPrice": 199,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=600&q=80",
+    "isNew": false
+  },
+  {
+    "id": 10,
+    "name": "Hi-Fi Studio Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 199,
+    "originalPrice": 249,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=600&q=80",
+    "isNew": false
+  },
+  {
+    "id": 11,
+    "name": "Minimalist White Leather Sneakers",
+    "category": "Footwear",
+    "price": 165,
+    "originalPrice": 210,
+    "rating": 4.9,
+    "imageUrl": "asset/sneakers.jpg",
+    "isNew": true
+  },
+  {
+    "id": 12,
+    "name": "Handcrafted Leather Loafers",
+    "category": "Footwear",
+    "price": 295,
+    "originalPrice": 380,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1614252369475-531eba835eb1?auto=format&fit=crop&w=600&q=80",
+    "isNew": false
+  },
+  {
+    "id": 13,
+    "name": "Classic Suede Chelsea Boots",
+    "category": "Footwear",
+    "price": 320,
+    "originalPrice": 390,
+    "rating": 4.7,
+    "imageUrl": "https://images.unsplash.com/photo-1638247025967-b4e38f787b76?auto=format&fit=crop&w=600&q=80",
+    "isNew": false
+  },
+  {
+    "id": 14,
+    "name": "Breathable Performance Runners",
+    "category": "Footwear",
+    "price": 145,
+    "originalPrice": 180,
+    "rating": 4.6,
+    "imageUrl": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80",
+    "isNew": false
+  },
+  {
+    "id": 15,
+    "name": "Design Systems & Architecture",
+    "category": "Books",
+    "price": 48,
+    "originalPrice": 65,
+    "rating": 4.9,
+    "imageUrl": "asset/book.jpg",
+    "isNew": true
+  },
+  {
+    "id": 16,
+    "name": "The Philosophy of Quiet Luxury",
+    "category": "Books",
+    "price": 38,
+    "originalPrice": 50,
+    "rating": 4.8,
+    "imageUrl": "https://images.unsplash.com/photo-1544947950-fa07a98d237f?auto=format&fit=crop&w=600&q=80",
+    "isNew": false
+  }
+]
