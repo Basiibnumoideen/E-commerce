@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ShopNest — Curated pieces for a life well-lived. Embrace the elegance of understatement and timeless luxury.">
+    <meta name="description"
+        content="ATELIER — Curated pieces for a life well-lived. Embrace the elegance of understatement and timeless luxury.">
     <meta name="theme-color" content="#1C1917">
 
-    <title>ShopNest — Timeless Style &amp; Quiet Luxury</title>
+    <title>ATELIER — Timeless Style &amp; Quiet Luxury</title>
 
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +19,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="style.css">
@@ -29,52 +32,39 @@
     <!-- ==========================================================================
          TOP NAVIGATION HEADER
          ========================================================================== -->
-    <header class="top-header">
-        <nav class="navbar navbar-expand-md navbar-custom">
-            <div class="container">
+    <header class="top-header sticky-top">
+        <nav class="navbar navbar-expand-md navbar-custom py-0">
+            <div class="container position-relative d-flex justify-content-between align-items-center">
 
                 <!-- Mobile Menu Toggle Button -->
-                <button class="menu-btn d-md-none" id="mobile-menu-btn" type="button" aria-label="Toggle navigation menu">
+                <button class="menu-btn d-md-none border-0 bg-transparent" id="mobile-menu-btn" type="button"
+                    aria-label="Toggle navigation menu">
                     <i class="bi bi-list"></i>
                 </button>
 
                 <!-- Left Navigation Links -->
-                <ul class="nav-links d-none d-md-flex">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#new-arrivals">SHOP</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#categories">CATEGORIES</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#trending">EDITORIAL</a>
-                    </li>
+                <ul class="nav-links d-none d-md-flex list-unstyled m-0 p-0 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#new-arrivals">SHOP</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#categories">CATEGORIES</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trending">EDITORIAL</a></li>
                 </ul>
 
                 <!-- Brand Logo -->
-                <a href="#" class="logo navbar-brand">
-                    SHOPNEST
-                </a>
+                <a href="#" class="logo navbar-brand">ATELIER</a>
 
                 <!-- Right Action Icons -->
-                <div class="nav-icons d-none d-md-flex">
-                    <a href="#new-arrivals" id="nav-search-icon" aria-label="Search catalog">
-                        <i class="bi bi-search"></i>
-                    </a>
-                    <a href="#" aria-label="View wishlist">
-                        <i class="bi bi-heart"></i>
-                    </a>
-                    <a href="#cart" class="cart-trigger-btn" aria-label="View shopping bag">
+                <div class="nav-icons d-none d-md-flex align-items-center">
+                    <a href="#new-arrivals" id="nav-search-icon" aria-label="Search catalog"><i class="bi bi-search"></i></a>
+                    <a href="#" aria-label="View wishlist"><i class="bi bi-heart"></i></a>
+                    <a href="#cart" class="cart-trigger-btn position-relative" aria-label="View shopping bag">
                         <i class="bi bi-bag"></i>
                         <span class="cart-count-badge" id="cart-badge-count">0</span>
                     </a>
-                    <a href="#" aria-label="User account">
-                        <i class="bi bi-person"></i>
-                    </a>
+                    <a href="#" id="accountBtn" class="account-btn" aria-label="User account"><i class="bi bi-person"></i></a>
                 </div>
 
                 <!-- Mobile Cart Link -->
-                <a href="#cart" class="mobile-cart d-md-none cart-trigger-btn" aria-label="View shopping bag">
+                <a href="#cart" class="mobile-cart d-md-none cart-trigger-btn position-relative" aria-label="View shopping bag">
                     <i class="bi bi-bag"></i>
                     <span class="cart-count-badge" id="mobile-cart-badge-count">0</span>
                 </a>
@@ -88,39 +78,35 @@
         <!-- ==========================================================================
              HERO BANNER SECTION
              ========================================================================== -->
-        <section class="hero" id="home">
-            <img src="asset/Hero.png" alt="ShopNest Autumn/Winter Collection" class="hero-image">
-
-            <div class="hero-overlay">
-                <span class="hero-tag">NEW COLLECTION</span>
+        <section class="hero position-relative overflow-hidden" id="home">
+            <img src="asset/Hero.png" alt="ATELIER Autumn/Winter Collection" class="hero-image w-100 h-100 object-fit-cover">
+            <div class="hero-overlay text-center position-absolute top-50 start-50 translate-middle">
+                <span class="hero-tag d-block">NEW COLLECTION</span>
                 <h1>Timeless Style</h1>
                 <p>Curated pieces for a life well-lived. Embrace the elegance of understatement.</p>
-                <a href="#new-arrivals" class="hero-btn">EXPLORE COLLECTION</a>
+                <a href="#new-arrivals" class="hero-btn text-decoration-none">EXPLORE COLLECTION</a>
             </div>
         </section>
 
         <!-- Complimentary Shipping Bar -->
-        <section class="shipping-bar">
+        <section class="shipping-bar d-flex justify-content-center align-items-center text-center px-3">
             <span>Complimentary global shipping and returns on all orders over $300.</span>
         </section>
 
         <!-- ==========================================================================
              FEATURED CATEGORIES SECTION
              ========================================================================== -->
-        <section class="featured-categories" id="categories">
+        <section class="featured-categories py-5" id="categories">
             <div class="container">
-
-                <!-- Mobile Section Heading -->
-                <div class="section-heading">
+                <div class="section-heading d-none">
                     <h2>Essentials</h2>
                     <span></span>
                 </div>
 
                 <div class="category-grid">
-
                     <!-- Left Large Featured Category Card -->
                     <article class="category-card category-large" data-category-filter="Clothing">
-                        <img src="asset/essential.png" alt="Essentials Collection">
+                        <img src="asset/essential.png" alt="Essentials Collection" class="w-100 h-100 object-fit-cover">
                         <div class="category-content">
                             <h3>Essentials</h3>
                             <a href="#new-arrivals" data-category-filter="Clothing">SHOP NOW</a>
@@ -128,10 +114,9 @@
                     </article>
 
                     <!-- Right Column Category Cards -->
-                    <div class="category-right">
-
+                    <div class="category-right d-flex flex-column gap-4">
                         <article class="category-card" data-category-filter="Clothing">
-                            <img src="asset/shirt.png" alt="Signature Shirts Collection">
+                            <img src="asset/shirt.png" alt="Signature Shirts Collection" class="w-100 h-100 object-fit-cover">
                             <div class="category-content">
                                 <h3>Shirts</h3>
                                 <a href="#new-arrivals" data-category-filter="Clothing">SHOP NOW</a>
@@ -139,39 +124,34 @@
                         </article>
 
                         <article class="category-card" data-category-filter="Clothing">
-                            <img src="asset/jeans.png" alt="Tailored Jeans Collection">
+                            <img src="asset/jeans.png" alt="Tailored Jeans Collection" class="w-100 h-100 object-fit-cover">
                             <div class="category-content">
                                 <h3>Jeans</h3>
                                 <a href="#new-arrivals" data-category-filter="Clothing">SHOP NOW</a>
                             </div>
                         </article>
-
                     </div>
-
                 </div>
-
             </div>
         </section>
 
         <!-- ==========================================================================
-             NEW ARRIVALS PRODUCT SECTION (DYNAMIC PRODUCTS, LIVE SEARCH & CATEGORY FILTERS)
+             NEW ARRIVALS PRODUCT SECTION
              ========================================================================== -->
-        <section class="new-arrivals" id="new-arrivals">
+        <section class="new-arrivals py-5" id="new-arrivals">
             <div class="container-fluid px-lg-5 px-3">
 
                 <!-- Section Header -->
                 <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4 flex-wrap gap-2">
                     <h2 class="section-title mb-0">New Arrivals</h2>
-                    <a href="#new-arrivals" class="view-all" id="btn-view-all">VIEW ALL</a>
+                    <a href="#new-arrivals" class="view-all text-decoration-none" id="btn-view-all">VIEW ALL</a>
                 </div>
 
-                <!-- Assignment 2 Filter Controls: Category Buttons & Live Search Input -->
+                <!-- Catalog Controls: Category Buttons & Live Search Input -->
                 <div class="catalog-controls mb-4">
                     <div class="row g-3 align-items-center justify-content-between">
-                        
-                        <!-- Category Filter Buttons: All, Electronics, Clothing, Footwear, Books -->
                         <div class="col-lg-7 col-md-12">
-                            <div class="category-filter-group" id="category-filter-group">
+                            <div class="category-filter-group d-flex flex-wrap gap-2 align-items-center" id="category-filter-group">
                                 <button type="button" class="cat-btn active" data-category="All">All</button>
                                 <button type="button" class="cat-btn" data-category="Electronics">Electronics</button>
                                 <button type="button" class="cat-btn" data-category="Clothing">Clothing</button>
@@ -180,35 +160,30 @@
                             </div>
                         </div>
 
-                        <!-- Live Search Input using 'input' event -->
+                        <!-- Live Search Input -->
                         <div class="col-lg-5 col-md-12">
-                            <div class="search-input-wrapper">
-                                <i class="bi bi-search search-icon"></i>
-                                <input type="text" id="live-search-input" class="form-control live-search-field" placeholder="Search products by name..." autocomplete="off">
-                                <button type="button" class="clear-search-btn" id="clear-search-btn" aria-label="Clear Search">
+                            <div class="search-input-wrapper position-relative w-100">
+                                <i class="bi bi-search search-icon position-absolute top-50 translate-middle-y"></i>
+                                <input type="text" id="live-search-input" class="form-control live-search-field"
+                                    placeholder="Search products by name..." autocomplete="off">
+                                <button type="button" class="clear-search-btn position-absolute top-50 translate-middle-y border-0 bg-transparent"
+                                    id="clear-search-btn" aria-label="Clear Search">
                                     <i class="bi bi-x-circle-fill"></i>
                                 </button>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                <!-- Dynamic Products Container: Rendered via JavaScript DOM methods (No hardcoded HTML) -->
-                <div class="row g-4" id="products-container">
-                    <!-- Products dynamically rendered here by app.js -->
-                </div>
+                <!-- Dynamic Products Container: Rendered via JavaScript DOM methods -->
+                <div class="row g-4" id="products-container"></div>
 
                 <!-- "No products found" Message Container -->
-                <div class="no-products-found" id="no-products-message">
-                    <div class="no-products-icon">
-                        <i class="bi bi-search"></i>
-                    </div>
-                    <h4>No products found</h4>
-                    <p>No products match your active search and category filter combination.</p>
-                    <button type="button" class="btn-reset-search" id="btn-reset-filters">
-                        RESET ALL FILTERS
-                    </button>
+                <div class="no-products-found text-center" id="no-products-message">
+                    <div class="no-products-icon mb-2"><i class="bi bi-search"></i></div>
+                    <h4 class="mb-2">No products found</h4>
+                    <p class="mb-3">No products match your active search and category filter combination.</p>
+                    <button type="button" class="btn-reset-search" id="btn-reset-filters">RESET ALL FILTERS</button>
                 </div>
 
             </div>
@@ -217,35 +192,133 @@
         <!-- ==========================================================================
              TRENDING PICKS / EDITORIAL SECTION
              ========================================================================== -->
-        <section class="trending-section" id="trending">
+        <section class="trending-section py-5" id="trending">
             <div class="container">
                 <div class="row g-4 align-items-center">
-
-                    <!-- Left Featured Image -->
                     <div class="col-lg-8">
-                        <div class="trending-image">
-                            <img src="asset/trend pick.png" alt="Curated Seasonal Collection" class="img-fluid">
+                        <div class="trending-image overflow-hidden">
+                            <img src="asset/trend pick.png" alt="Curated Seasonal Collection" class="img-fluid w-100 object-fit-cover">
                         </div>
                     </div>
-
-                    <!-- Right Editorial Content -->
                     <div class="col-lg-4">
-                        <div class="trending-content">
-                            <span class="section-tag">CURATED SELECTION</span>
-                            <h2>
-                                Trending Picks<br>For The Season
-                            </h2>
+                        <div class="trending-content ms-lg-auto">
+                            <span class="section-tag d-block">CURATED SELECTION</span>
+                            <h2>Trending Picks<br>For The Season</h2>
                             <p>
                                 Discover pieces defined by their meticulous craftsmanship
                                 and understated elegance. Designed to transcend seasons,
                                 our latest curation offers the perfect balance of form,
                                 function, and unparalleled quality.
                             </p>
-                            <a href="#new-arrivals" class="lookbook-btn">VIEW THE LOOKBOOK</a>
+                            <a href="#new-arrivals" class="lookbook-btn text-decoration-none">VIEW THE LOOKBOOK</a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==========================================================================
+             YOUR CART PAGE SECTION (FULL-WIDTH FIGMA LUXURY SPECIFICATION)
+             ========================================================================== -->
+        <section class="cart-page-section" id="cart-page-section" style="display: none;">
+            <div class="container py-5">
+                
+                <!-- Cart Page Top Header: Title, Items Counter & Continue Shopping -->
+                <div class="cart-page-header d-flex justify-content-between align-items-end mb-4 pb-3 border-bottom">
+                    <div>
+                        <h1 class="cart-page-title mb-1">Your Cart</h1>
+                        <p class="cart-page-subtitle mb-0" id="cartPageSubtitle">0 items ready for checkout.</p>
+                    </div>
+                    <a href="#new-arrivals" class="btn-continue-shopping text-decoration-none text-uppercase" id="btnContinueShopping">
+                        CONTINUE SHOPPING
+                    </a>
+                </div>
+
+                <!-- Empty Cart State for Cart Page -->
+                <div class="cart-page-empty text-center py-5" id="cartPageEmpty" style="display: none;">
+                    <i class="bi bi-bag-x cart-empty-icon d-block mb-3"></i>
+                    <h3 class="mb-2">Your shopping bag is empty</h3>
+                    <p class="mb-4">Discover pieces defined by meticulous craftsmanship and timeless luxury.</p>
+                    <a href="#new-arrivals" class="hero-btn mt-3 text-decoration-none" id="btnCartPageExplore">EXPLORE COLLECTION</a>
+                </div>
+
+                <!-- Main Cart Content (Two-Column Layout) -->
+                <div class="cart-page-layout row g-5" id="cartPageLayout">
+                    
+                    <!-- Left Column: Items List -->
+                    <div class="col-lg-8 col-12">
+                        <div class="cart-page-items-list d-flex flex-column" id="cartPageItemsList"></div>
+                    </div>
+
+                    <!-- Right Column: Order Summary Card -->
+                    <div class="col-lg-4 col-12">
+                        <aside class="order-summary-card">
+                            <h2 class="order-summary-heading mb-4">ORDER SUMMARY</h2>
+
+                            <!-- Discount Code Box -->
+                            <div class="summary-discount-box mb-4 pb-4 border-bottom">
+                                <label for="cartDiscountInput" class="summary-discount-label d-block mb-2">DISCOUNT CODE</label>
+                                <div class="summary-discount-group d-flex">
+                                    <input type="text" id="cartDiscountInput" class="summary-discount-input flex-grow-1 border-0"
+                                        placeholder="Enter code" autocomplete="off">
+                                    <button type="button" id="btnApplyCartDiscount" class="summary-discount-btn">APPLY</button>
+                                </div>
+                                <div class="applied-discount-row justify-content-between align-items-center mt-2 p-2"
+                                    id="appliedDiscountRow" style="display: none;">
+                                    <span class="applied-text">Applied: <strong id="appliedDiscountCodeName">LUXE10</strong></span>
+                                    <button type="button" id="btnRemoveCartDiscount" class="btn-remove-discount">REMOVE</button>
+                                </div>
+                                <div class="discount-feedback-msg mt-2" id="discountFeedbackMsg"></div>
+                            </div>
+
+                            <!-- Price Breakdown -->
+                            <div class="summary-breakdown-list d-flex flex-column gap-3 mb-4">
+                                <div class="summary-breakdown-row d-flex justify-content-between">
+                                    <span class="summary-label">Subtotal</span>
+                                    <span class="summary-value" id="summarySubtotalVal">$0.00</span>
+                                </div>
+                                <div class="summary-breakdown-row summary-discount-line d-flex justify-content-between"
+                                    id="summaryDiscountLine" style="display: none;">
+                                    <span class="summary-label">Discount</span>
+                                    <span class="summary-value discount-text" id="summaryDiscountVal">-$0.00</span>
+                                </div>
+                                <div class="summary-breakdown-row d-flex justify-content-between">
+                                    <span class="summary-label">Shipping</span>
+                                    <span class="summary-value" id="summaryShippingVal">Calculated at next step</span>
+                                </div>
+                                <div class="summary-breakdown-row d-flex justify-content-between">
+                                    <span class="summary-label">Tax</span>
+                                    <span class="summary-value">Calculated at next step</span>
+                                </div>
+                            </div>
+
+                            <!-- Total -->
+                            <div class="summary-total-row d-flex justify-content-between align-items-baseline pt-3 mb-4 border-top">
+                                <span class="summary-total-label">Total</span>
+                                <span class="summary-total-price" id="summaryTotalPriceVal">$0.00</span>
+                            </div>
+
+                            <!-- Checkout Button -->
+                            <button type="button" class="btn-proceed-checkout w-100 text-uppercase border-0 mb-4" id="btnPageCheckout">
+                                PROCEED TO CHECKOUT
+                            </button>
+
+                            <!-- Trust Badges -->
+                            <div class="summary-trust-badges d-flex flex-column gap-2 pt-1">
+                                <div class="trust-badge-item d-flex align-items-center gap-2">
+                                    <i class="bi bi-truck"></i>
+                                    <span>Complimentary shipping on orders over $300.</span>
+                                </div>
+                                <div class="trust-badge-item d-flex align-items-center gap-2">
+                                    <i class="bi bi-shield-lock"></i>
+                                    <span>Secure checkout process.</span>
+                                </div>
+                            </div>
+                        </aside>
                     </div>
 
                 </div>
+
             </div>
         </section>
 
@@ -257,104 +330,305 @@
     <footer class="site-footer">
         <div class="container">
             <div class="row align-items-start">
-
-                <!-- Left Column -->
                 <div class="col-lg-5 footer-left">
-                    <a href="#" class="footer-logo">SHOPNEST</a>
-                    <p class="copyright">&copy; 2026 SHOPNEST. DEFINING QUIET LUXURY.</p>
+                    <a href="#" class="footer-logo d-inline-block text-decoration-none">ATELIER</a>
+                    <p class="copyright m-0">&copy; 2026 ATELIER. DEFINING QUIET LUXURY.</p>
                 </div>
-
-                <!-- Right Column -->
                 <div class="col-lg-7">
-                    <ul class="footer-links">
-                        <li><a href="#sustainability">SUSTAINABILITY</a></li>
-                        <li><a href="#shipping">SHIPPING</a></li>
-                        <li><a href="#contact">CONTACT</a></li>
-                        <li><a href="#privacy">PRIVACY</a></li>
+                    <ul class="footer-links list-unstyled d-flex flex-wrap gap-4 m-0 justify-content-lg-end">
+                        <li><a href="#sustainability" class="text-decoration-none">SUSTAINABILITY</a></li>
+                        <li><a href="#shipping" class="text-decoration-none">SHIPPING</a></li>
+                        <li><a href="#contact" class="text-decoration-none">CONTACT</a></li>
+                        <li><a href="#privacy" class="text-decoration-none">PRIVACY</a></li>
                     </ul>
                 </div>
-
             </div>
         </div>
     </footer>
 
     <!-- ==========================================================================
-         SLIDE-OUT SHOPPING CART DRAWER (ASSIGNMENT 2 REQUIREMENT)
+         SLIDE-OUT SHOPPING CART DRAWER
          ========================================================================== -->
     <div class="cart-backdrop" id="cart-backdrop"></div>
 
     <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
-        
-        <!-- Cart Drawer Header -->
-        <div class="cart-drawer-header">
-            <h4 id="cart-drawer-title" class="cart-drawer-title">
+        <div class="cart-drawer-header d-flex align-items-center justify-content-between p-3 border-bottom">
+            <h4 id="cart-drawer-title" class="cart-drawer-title m-0">
                 Shopping Bag <span class="cart-item-count-text" id="cart-item-count-text">(0 items)</span>
             </h4>
-            <button type="button" class="btn-close-cart" id="btn-close-cart" aria-label="Close Shopping Bag">
+            <button type="button" class="btn-close-cart bg-transparent border-0" id="btn-close-cart" aria-label="Close Shopping Bag">
                 <i class="bi bi-x-lg"></i>
             </button>
         </div>
 
-        <!-- Free Shipping Notice Bar -->
-        <div class="cart-shipping-notice" id="cart-shipping-notice">
+        <div class="cart-shipping-notice d-flex align-items-center gap-2 px-3 py-2 border-bottom" id="cart-shipping-notice">
             <i class="bi bi-truck"></i>
             <span id="cart-shipping-msg">Complimentary shipping on orders over $300</span>
         </div>
 
-        <!-- Cart Drawer Body / Items List -->
-        <div class="cart-drawer-body" id="cart-drawer-body">
-            
-            <div class="cart-items-list" id="cart-items-list">
-                <!-- Dynamically populated cart item rows -->
-            </div>
+        <div class="cart-drawer-body flex-grow-1 overflow-auto p-3" id="cart-drawer-body">
+            <div class="cart-items-list d-flex flex-column gap-3" id="cart-items-list"></div>
 
-            <!-- Empty Cart Notice -->
-            <div class="cart-empty-state" id="cart-empty-state">
-                <i class="bi bi-bag-x cart-empty-icon"></i>
-                <h5>Your shopping bag is empty</h5>
-                <p>Explore the collection and add items to your bag.</p>
-                <button type="button" class="hero-btn mt-3" id="btn-cart-shop">EXPLORE PRODUCTS</button>
+            <div class="cart-empty-state text-center py-5" id="cart-empty-state">
+                <i class="bi bi-bag-x cart-empty-icon d-block mb-3"></i>
+                <h5 class="mb-2">Your shopping bag is empty</h5>
+                <p class="mb-3">Explore the collection and add items to your bag.</p>
+                <button type="button" class="hero-btn mt-3 text-decoration-none" id="btn-cart-shop">EXPLORE PRODUCTS</button>
             </div>
-
         </div>
 
-        <!-- Cart Drawer Footer / Summary & Checkout -->
-        <div class="cart-drawer-footer" id="cart-drawer-footer">
-            
-            <div class="cart-price-row">
+        <div class="cart-drawer-footer p-3 border-top" id="cart-drawer-footer">
+            <div class="cart-price-row d-flex justify-content-between mb-2">
                 <span>Subtotal</span>
                 <span id="cart-subtotal">$0.00</span>
             </div>
-            
-            <div class="cart-price-row">
+            <div class="cart-price-row d-flex justify-content-between mb-2">
                 <span>Estimated Shipping</span>
                 <span id="cart-shipping">$0.00</span>
             </div>
-
-            <div class="cart-total-row">
+            <div class="cart-total-row d-flex justify-content-between align-items-baseline pt-2 mt-2 border-top mb-3">
                 <span>Total</span>
                 <span class="cart-total-amount" id="cart-total-amount">$0.00</span>
             </div>
-
-            <button type="button" class="btn-checkout" id="btn-checkout">
-                PROCEED TO CHECKOUT
-            </button>
-
-            <button type="button" class="btn-clear-cart" id="btn-clear-cart">
-                Clear Shopping Bag
-            </button>
-
+            <button type="button" class="btn-checkout w-100 border-0 mb-2" id="btn-checkout">PROCEED TO CHECKOUT</button>
+            <button type="button" class="btn-clear-cart border-0 bg-transparent w-100 text-center" id="btn-clear-cart">Clear Shopping Bag</button>
         </div>
-
     </aside>
 
+    <!-- ==========================================================================
+         ATELIER ACCOUNT AUTHENTICATION MODAL (LUXURY MINIMALIST)
+         ========================================================================== -->
+    <div class="sn-modal-backdrop" id="snAuthModal" role="dialog" aria-modal="true" aria-labelledby="snModalTitle" aria-hidden="true">
+        <div class="sn-modal-card position-relative" role="document">
+            <button type="button" class="sn-modal-close close-btn position-absolute border-0 bg-transparent"
+                id="snModalCloseBtn" aria-label="Close modal">
+                <i class="bi bi-x"></i>
+            </button>
+
+            <header class="sn-modal-header text-center mb-4">
+                <h2 class="sn-modal-brand text-uppercase mb-1" id="snModalTitle">ATELIER</h2>
+                <p class="sn-modal-subtitle m-0" id="snModalSubtitle">Sign in to your account</p>
+            </header>
+
+            <div class="sn-tabs-nav d-flex border-bottom mb-4" role="tablist">
+                <button type="button" class="sn-tab-btn active flex-grow-1 border-0 bg-transparent text-uppercase"
+                    id="snTabSignIn" role="tab" aria-selected="true">SIGN IN</button>
+                <button type="button" class="sn-tab-btn flex-grow-1 border-0 bg-transparent text-uppercase"
+                    id="snTabRegister" role="tab" aria-selected="false">CREATE ACCOUNT</button>
+            </div>
+
+            <div class="sn-form-alert mb-3" id="snFormAlert" role="alert" aria-live="polite"></div>
+
+            <form class="sn-auth-form w-100" id="snAuthForm" novalidate>
+                <!-- Name row only for CREATE ACCOUNT -->
+                <div class="sn-form-row mb-3" id="snNameRow" style="display: none;">
+                    <div class="sn-form-col">
+                        <label for="snFirstNameInput" class="sn-form-label text-uppercase d-block mb-1">FIRST NAME</label>
+                        <input type="text" id="snFirstNameInput" name="firstName" class="sn-form-input w-100"
+                            placeholder="First Name *" autocomplete="given-name">
+                    </div>
+                    <div class="sn-form-col">
+                        <label for="snLastNameInput" class="sn-form-label text-uppercase d-block mb-1">LAST NAME</label>
+                        <input type="text" id="snLastNameInput" name="lastName" class="sn-form-input w-100"
+                            placeholder="Last Name *" autocomplete="family-name">
+                    </div>
+                </div>
+
+                <div class="sn-form-group mb-4">
+                    <label for="snEmailInput" class="sn-form-label text-uppercase d-block mb-1" id="snEmailLabel">EMAIL ADDRESS</label>
+                    <input type="email" id="snEmailInput" name="email" class="sn-form-input w-100"
+                        placeholder="your@email.com" autocomplete="email" required>
+                </div>
+
+                <div class="sn-form-group mb-4">
+                    <label for="snPasswordInput" class="sn-form-label text-uppercase d-block mb-1" id="snPasswordLabel">PASSWORD</label>
+                    <input type="password" id="snPasswordInput" name="password" class="sn-form-input w-100"
+                        placeholder="••••••••" autocomplete="current-password" required>
+                </div>
+
+                <div class="sn-form-controls d-flex justify-content-between align-items-center mb-4" id="snFormControlsRow">
+                    <label class="sn-checkbox-wrapper d-inline-flex align-items-center m-0">
+                        <input type="checkbox" id="snRememberMe" name="rememberMe" class="sn-checkbox-input">
+                        <span class="sn-custom-checkbox" aria-hidden="true"></span>
+                        <span class="sn-checkbox-label">Remember me</span>
+                    </label>
+                    <a href="#forgot-password" class="sn-forgot-link text-decoration-none" id="snForgotPwdBtn">Forgot password?</a>
+                </div>
+
+                <!-- Registration checkboxes only for CREATE ACCOUNT -->
+                <div class="sn-checkboxes-group mb-4" id="snRegisterCheckboxes" style="display: none;">
+                    <label class="sn-checkbox-item d-flex align-items-start gap-2 m-0 mb-2">
+                        <input type="checkbox" id="snNewsletter" name="newsletter" class="sn-checkbox-input">
+                        <span class="sn-custom-checkbox" aria-hidden="true"></span>
+                        <span class="sn-checkbox-text">Subscribe to our newsletter for exclusive offers and updates.</span>
+                    </label>
+                    <label class="sn-checkbox-item d-flex align-items-start gap-2 m-0">
+                        <input type="checkbox" id="snAgreeTerms" name="agreeTerms" class="sn-checkbox-input" required>
+                        <span class="sn-custom-checkbox" aria-hidden="true"></span>
+                        <span class="sn-checkbox-text">I agree to the <a href="#terms" class="sn-terms-link">Terms and Conditions</a> and <a href="#privacy" class="sn-terms-link">Privacy Policy</a>. *</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="sn-btn-primary w-100 border-0 text-uppercase d-flex align-items-center justify-content-center" id="snSubmitBtn">
+                    <span class="sn-btn-text">SIGN IN</span>
+                </button>
+
+                <div class="sn-divider d-flex align-items-center text-center my-3">
+                    <span class="sn-divider-text text-uppercase px-3">OR CONTINUE WITH</span>
+                </div>
+
+                <button type="button" class="sn-btn-google w-100 d-flex align-items-center justify-content-center gap-2" id="snGoogleBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" class="sn-google-icon flex-shrink-0" aria-hidden="true">
+                        <path fill="#4285F4"
+                            d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z" />
+                        <path fill="#34A853"
+                            d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z" />
+                        <path fill="#FBBC05"
+                            d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.16 0 9.97 0 12s.45 3.84 1.25 5.42l4.03-3.15z" />
+                        <path fill="#EA4335"
+                            d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z" />
+                    </svg>
+                    <span>GOOGLE</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
     <!-- Toast Notification Container for Feedback -->
-    <div class="toast-container-custom" id="toast-container"></div>
+    <div class="toast-container-custom position-fixed d-flex flex-column gap-2" id="toast-container"></div>
+
+    <!-- ==========================================================================
+         EMBEDDED PRODUCT CATALOG (NO EXTERNAL JSON OR IMAGE LINKS)
+         ========================================================================== -->
+    <script id="atelier-products-data" type="application/json">
+[
+    {
+        "id": 1,
+        "name": "Structured Linen Blazer",
+        "category": "Clothing",
+        "price": 495,
+        "originalPrice": 590,
+        "rating": 4.8,
+        "imageUrl": "asset/Blazer.png",
+        "isNew": true
+    },
+    {
+        "id": 2,
+        "name": "Fluid Silk Blouse",
+        "category": "Clothing",
+        "price": 280,
+        "originalPrice": 350,
+        "rating": 4.9,
+        "imageUrl": "asset/silk blouse.png",
+        "isNew": true
+    },
+    {
+        "id": 3,
+        "name": "Wide-Leg Wool Trousers",
+        "category": "Clothing",
+        "price": 340,
+        "originalPrice": 420,
+        "rating": 4.7,
+        "imageUrl": "asset/trouser.png",
+        "isNew": false
+    },
+    {
+        "id": 4,
+        "name": "Unstructured Cashmere Coat",
+        "category": "Clothing",
+        "price": 850,
+        "originalPrice": 990,
+        "rating": 5.0,
+        "imageUrl": "asset/coat.png",
+        "isNew": true
+    },
+    {
+        "id": 5,
+        "name": "Tailored Slim Jeans",
+        "category": "Clothing",
+        "price": 210,
+        "originalPrice": 260,
+        "rating": 4.7,
+        "imageUrl": "asset/jeans.png",
+        "isNew": false
+    },
+    {
+        "id": 6,
+        "name": "Classic Oxford Shirt",
+        "category": "Clothing",
+        "price": 185,
+        "originalPrice": 220,
+        "rating": 4.6,
+        "imageUrl": "asset/shirt.png",
+        "isNew": false
+    },
+    {
+        "id": 7,
+        "name": "Wireless Studio Headphones",
+        "category": "Electronics",
+        "price": 349,
+        "originalPrice": 429,
+        "rating": 4.9,
+        "imageUrl": "asset/headphones.jpg",
+        "isNew": true
+    },
+    {
+        "id": 8,
+        "name": "Precision Smart Watch",
+        "category": "Electronics",
+        "price": 279,
+        "originalPrice": 349,
+        "rating": 4.8,
+        "imageUrl": "asset/smartwatch.jpg",
+        "isNew": true
+    },
+    {
+        "id": 9,
+        "name": "Minimalist Leather Sneakers",
+        "category": "Footwear",
+        "price": 165,
+        "originalPrice": 210,
+        "rating": 4.9,
+        "imageUrl": "asset/sneakers.jpg",
+        "isNew": true
+    },
+    {
+        "id": 10,
+        "name": "Architecture & Design Monograph",
+        "category": "Books",
+        "price": 48,
+        "originalPrice": 65,
+        "rating": 4.9,
+        "imageUrl": "asset/book.jpg",
+        "isNew": true
+    },
+    {
+        "id": 11,
+        "name": "Structured Leather Tote",
+        "category": "Clothing",
+        "price": 420,
+        "originalPrice": 510,
+        "rating": 4.9,
+        "imageUrl": "asset/tote.png",
+        "isNew": true
+    },
+    {
+        "id": 12,
+        "name": "Cashmere Blend Scarf",
+        "category": "Clothing",
+        "price": 180,
+        "originalPrice": 220,
+        "rating": 4.8,
+        "imageUrl": "asset/scarf.png",
+        "isNew": false
+    }
+]
+    </script>
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Interactive Logic Script (Assignment 2) -->
+    <!-- Interactive Logic Script -->
     <script src="app.js"></script>
 
 </body>
