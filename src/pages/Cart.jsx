@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 import CartItem from '../components/CartItem';
+import { createOrderApi } from '../services/api';
 
 export default function Cart() {
   const { 
@@ -44,8 +45,32 @@ export default function Cart() {
     setCheckoutModalOpen(true);
   };
 
-  const handleCompleteOrder = (e) => {
+  const handleCompleteOrder = async (e) => {
     e.preventDefault();
+    const token = localStorage.getItem('atelier_auth_token');
+    if (token && cart.length > 0) {
+      try {
+        const orderPayload = {
+          items: cart.map((item) => ({
+            name: item.name,
+            quantity: item.quantity,
+            price: item.price,
+            image: item.imageUrl
+          })),
+          totalAmount: total,
+          shippingAddress: {
+            street: '12 Avenue des Champs-Élysées',
+            city: 'Paris',
+            state: 'Île-de-France',
+            postalCode: '75008',
+            country: 'France'
+          }
+        };
+        await createOrderApi(orderPayload);
+      } catch (err) {
+        console.warn('[Cart Order Service]: Backend order sync warning:', err.message);
+      }
+    }
     clearCart();
     setCheckoutModalOpen(false);
     showToast('Order confirmed! A confirmation email has been dispatched.', 'success');

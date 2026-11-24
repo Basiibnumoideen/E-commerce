@@ -1,17 +1,52 @@
-# ShopNest (ATELIER) — React Frontend
+# ShopNest (ATELIER) — Full Stack MERN Platform
 
-> **Module End Assignment 3: ShopNest React Frontend**  
-> Complete responsive React e-commerce platform built with **React**, **Vite**, **React Router DOM**, **Context API**, and **Axios**.
-
----
-
-## 🔗 Live Application
-
-- **Live URL**: [https://basiibnumoideen.github.io/E-commerce/](https://basiibnumoideen.github.io/E-commerce/)
+> **Module End Assignment 4: ShopNest Full Backend (Node.js, Express, MongoDB Atlas, JWT, Orders)**  
+> **Module End Assignment 3: ShopNest React Frontend (React, Vite, Router, Context API, Axios)**  
+> Complete end-to-end full stack luxury e-commerce platform combining production Express REST API with the quiet-luxury ATELIER React client.
 
 ---
 
-## 📋 Evaluation Criteria & Implementation (25/25 Marks)
+## ⚡ Quick Navigation
+
+- **Backend Architecture & API Docs**: [backend/README.md](file:///c:/Entri%20Full%20stack%20dev/E-commerce/backend/README.md)
+- **Submission Document**: [SUBMISSION_ASSIGNMENT_4.md](file:///c:/Entri%20Full%20stack%20dev/E-commerce/SUBMISSION_ASSIGNMENT_4.md)
+- **Postman Collection**: [ShopNest_Backend_API.postman_collection.json](file:///c:/Entri%20Full%20stack%20dev/E-commerce/ShopNest_Backend_API.postman_collection.json)
+- **Frontend Live URL**: [https://basiibnumoideen.github.io/E-commerce/](https://basiibnumoideen.github.io/E-commerce/)
+
+---
+
+## 🏆 Backend Module End Assignment 4 — Evaluation Criteria (25/25 Marks)
+
+| Criteria | Marks | Implementation Details |
+| :--- | :---: | :--- |
+| **Project structure, MongoDB connection, CORS, and .env configuration** | 5 | Clean Express structure (`routes/`, `controllers/`, `models/`, `middleware/`, `config/`), connected to MongoDB Atlas via Mongoose with `.env`, and CORS configured for local ports (`5173`, `3000`) and deployment domains. |
+| **Product API with category and price filters using Mongoose** | 5 | `GET /api/products` with optional `?category=`, `?maxPrice=`, and text search filters. `GET /api/products/:id` resolves both ObjectId and numeric IDs. |
+| **Authentication — register, login, JWT middleware, and protected routes** | 5 | `POST /api/auth/register` (bcrypt 10-salt hash), `POST /api/auth/login` (bcrypt compare), and `protect` middleware attaching `req.user`. Non-admins receive `403 Forbidden` on admin-only routes. |
+| **Order system — schema, create order, fetch (populated), and status update** | 5 | Mongoose Order schema with referenced `userId` (`ref: User`), `items` array, `totalAmount`, and `status`. Endpoints: `POST /api/orders`, `GET /api/orders/my` (populated with user name & email), `PUT /api/orders/:id/status` (admin-only). |
+| **Global error handling — structured JSON with correct status codes** | 3 | Centralized error handler returning structured `{ success: false, error: ... }` for 404 routes, 400 validation/cast/duplicate key errors, 401 unauthorized, and 403 forbidden. |
+| **Deployment & Postman Collection** | 2 | Exportable Postman collection (`ShopNest_Backend_API.postman_collection.json`) with auto token capture, 22-test automated verification suite (`test.js`), and Render/Railway deployment guide. |
+
+---
+
+## 🚀 Running Backend & Integration Suite
+
+```bash
+# 1. Run automated backend integration tests (22/22 Passing)
+npm run test:backend
+
+# 2. Seed database with luxury products & admin/user credentials
+npm run seed
+
+# 3. Start Express backend (port 5000)
+npm run server
+
+# 4. Start React frontend (port 3000)
+npm run dev
+```
+
+---
+
+## 🎨 Phase 3: React Frontend Details
 
 | Criteria | Marks | Implementation Details |
 | :--- | :---: | :--- |

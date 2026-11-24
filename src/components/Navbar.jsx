@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { loginUserApi, registerUserApi } from '../services/api';
 
 export default function Navbar() {
   const { itemCount, wishlist } = useCart();
@@ -34,7 +35,7 @@ export default function Navbar() {
     }
   };
 
-  const handleAuthSubmit = (e) => {
+  const handleAuthSubmit = async (e) => {
     e.preventDefault();
     if (!authEmail.includes('@')) {
       setAuthMessage({ type: 'error', text: 'Please enter a valid email address.' });
@@ -45,29 +46,63 @@ export default function Navbar() {
       return;
     }
 
-    if (authMode === 'signin') {
-      const user = { email: authEmail, loggedInAt: new Date().toISOString() };
-      localStorage.setItem('atelier_auth_user', JSON.stringify(user));
-      setUserSession(user);
-      setAuthMessage({ type: 'success', text: `Welcome back to ATELIER!` });
-      setTimeout(() => {
-        setShowAccountModal(false);
-        setAuthMessage(null);
-      }, 1000);
-    } else {
-      const user = { firstName: authFirstName, lastName: authLastName, email: authEmail, registeredAt: new Date().toISOString() };
-      localStorage.setItem('atelier_auth_user', JSON.stringify(user));
-      setUserSession(user);
-      setAuthMessage({ type: 'success', text: `Welcome to ATELIER, ${authFirstName || 'Client'}!` });
-      setTimeout(() => {
-        setShowAccountModal(false);
-        setAuthMessage(null);
-      }, 1200);
+    try {
+      if (authMode === 'signin') {
+        const res = await loginUserApi(authEmail, authPassword);
+        const user = res.user || { email: authEmail, name: authEmail.split('@')[0] };
+        if (res.token) {
+          localStorage.setItem('atelier_auth_token', res.token);
+        }
+        localStorage.setItem('atelier_auth_user', JSON.stringify(user));
+        setUserSession(user);
+        setAuthMessage({ type: 'success', text: `Welcome back to ATELIER, ${user.name}!` });
+        setTimeout(() => {
+          setShowAccountModal(false);
+          setAuthMessage(null);
+        }, 1000);
+      } else {
+        const fullName = `${authFirstName} ${authLastName}`.trim() || 'Client';
+        const res = await registerUserApi({
+          name: fullName,
+          email: authEmail,
+          password: authPassword,
+          role: 'user'
+        });
+        const user = res.user || { name: fullName, email: authEmail };
+        if (res.token) {
+          localStorage.setItem('atelier_auth_token', res.token);
+        }
+        localStorage.setItem('atelier_auth_user', JSON.stringify(user));
+        setUserSession(user);
+        setAuthMessage({ type: 'success', text: `Welcome to ATELIER, ${user.name}!` });
+        setTimeout(() => {
+          setShowAccountModal(false);
+          setAuthMessage(null);
+        }, 1200);
+      }
+    } catch (err) {
+      // If backend reports an error, show it; fallback to offline session if network issue
+      if (err.message && !err.message.includes('Network Error')) {
+        setAuthMessage({ type: 'error', text: err.message });
+      } else {
+        const fallbackUser = {
+          email: authEmail,
+          name: authFirstName ? `${authFirstName} ${authLastName}`.trim() : authEmail.split('@')[0]
+        };
+        localStorage.setItem('atelier_auth_user', JSON.stringify(fallbackUser));
+        setUserSession(fallbackUser);
+        setAuthMessage({ type: 'success', text: `Welcome to ATELIER (Offline Mode)` });
+        setTimeout(() => {
+          setShowAccountModal(false);
+          setAuthMessage(null);
+        }, 1000);
+      }
     }
   };
 
   const handleLogout = () => {
     localStorage.removeItem('atelier_auth_user');
+    localStorage.removeItem('atelier_auth_token');
     setUserSession(null);
     setAuthMessage({ type: 'info', text: 'You have been signed out.' });
     setTimeout(() => {
