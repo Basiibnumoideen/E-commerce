@@ -1,4 +1,5 @@
 const dotenv = require('dotenv');
+const path = require('path');
 const bcrypt = require('bcryptjs');
 const mongoose = require('mongoose');
 const connectDB = require('./config/db');
@@ -6,6 +7,8 @@ const User = require('./models/User');
 const Product = require('./models/Product');
 const Order = require('./models/Order');
 
+// Load environment variables (supports running from root or backend directory)
+dotenv.config({ path: path.join(__dirname, '.env') });
 dotenv.config();
 
 const productsSeed = [
